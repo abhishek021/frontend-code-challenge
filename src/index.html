@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abhishek</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -137,27 +137,6 @@
 		</div>
 	</div>
 </div>
-<script>
-//fetch('https://api.mcmakler.de/v1/advertisements')
-fetch('jsonfile.json')
-  //.then((resp) => resp.json())
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-		var k=0;
-		var j=0;
-		for (var i=0;i < 10; i++) {
-			var list = document.getElementsByClassName("card")[j];
-			j++;
-		   	 list.getElementsByClassName("title")[k].innerHTML = myJson.data[i].title;
-			list.getElementsByClassName("rent")[k].innerHTML ="$ "+myJson.data[i].advertisementPrice.sellPrice;
-			list.getElementsByClassName("rooms")[k].innerHTML =myJson.data[i].realestateSummary.numberOfRooms+" rooms";
-			list.getElementsByClassName("space")[k].innerHTML =myJson.data[i].realestateSummary.space+" metre sq.";
-			list.getElementsByClassName("test")[k].src = myJson.data[i].advertisementAssets[i].advertisementThumbnails.thumb_xs.url;
-		
-		}
-  });
-</script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
