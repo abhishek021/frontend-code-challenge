@@ -1,5 +1,5 @@
 //fetch('https://api.mcmakler.de/v1/advertisements')
-fetch('jsonfile.json')
+fetch('../assets/data/jsonfile.json')
   .then(function(response) {
     return response.json();
   })
